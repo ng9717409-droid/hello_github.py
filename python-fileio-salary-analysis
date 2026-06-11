@@ -1,0 +1,17 @@
+f=open("salary.txt","r")
+data=f.read()
+f.close()
+salary=data.split(",")
+salary2=[]
+for i in salary:
+	salary2.append(int(i))
+print(salary2)
+count=0
+total=0
+for i in salary2:
+	if i>20000:
+		count+=1
+		total+=i
+print("The number of salaries which is above 20000 is=", count)
+print("The total salaries sum which is above 20000is =", total)
+print("The highest salary is =", max(salary2))
